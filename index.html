@@ -10,18 +10,18 @@
 /* ===== MOBILE OPTIMIZATION FOR BANNER SECTION ===== */
 @media (max-width: 768px) {
 
-
-  /* Banner Section */
+  /* ===== Banner Section ===== */
   .banner {
     display: flex !important;
     flex-direction: row !important;
     align-items: center !important;
     justify-content: center !important;
     gap: 15px !important;
-    padding: 100px 15px 50px 15px !important;
-    height: auto !important;
-    background: #fff;
+    padding: 100px 15px 40px 15px !important;
+    height: 75vh !important; /* Occupy 3/4 of viewport */
     text-align: left !important;
+    background: #fff;
+    box-sizing: border-box;
   }
 
   .banner .content {
@@ -44,36 +44,37 @@
     font-size: 0.95em !important;
     padding: 10px 22px !important;
     border-radius: 6px;
-    margin-top: 10px;
+    margin-top: 2px;
   }
 
   .banner .image {
     width: 45% !important;
-    height: auto !important;
+    height: 100% !important;
     display: flex !important;
     justify-content: center !important;
+    align-items: center !important;
   }
 
   .banner .image img {
     width: 100% !important;
-    height: auto !important;
-    border-radius: 10px;
+    height: 100% !important;
     object-fit: cover !important;
+    border-radius: 10px;
     opacity: 1 !important;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   }
 }
 
-/* Small phones - tighter spacing */
+/* ===== Even smaller phones ===== */
 @media (max-width: 480px) {
   .banner {
-    flex-direction: row !important;
-    padding: 80px 10px 40px 10px !important;
     gap: 10px !important;
+    padding: 80px 10px 30px 10px !important;
+    height: 75vh !important; /* Still 3/4 of viewport */
   }
 
   .banner .content {
-    width: 58% !important;
+    width: 60% !important;
   }
 
   .banner .content h1 {
@@ -85,7 +86,7 @@
   }
 
   .banner .image {
-    width: 42% !important;
+    width: 40% !important;
   }
 
   .banner .image img {
@@ -93,6 +94,7 @@
   }
 }
 </style>
+
 
 	</head>
 	<body class="is-preload">
@@ -387,6 +389,7 @@ window.addEventListener('load', () => {
 
 	</body>
 </html>
+
 
 
 
