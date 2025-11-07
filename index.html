@@ -6,6 +6,91 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+  /* ===== MOBILE OPTIMIZATION FOR BANNER SECTION ===== */
+  @media (max-width: 768px) {
+    /* Navbar mobile style */
+    nav {
+      flex-direction: column;
+      align-items: flex-start !important;
+      padding: 10px 20px !important;
+      background: rgba(255, 255, 255, 0.9) !important;
+      backdrop-filter: blur(10px);
+    }
+
+    nav ul {
+      flex-direction: column;
+      width: 100%;
+      gap: 10px !important;
+      margin-top: 10px;
+    }
+
+    nav ul li a {
+      font-size: 1em;
+      padding: 5px 0;
+      border-bottom: 1px solid rgba(0,0,0,0.1);
+      display: block;
+    }
+
+    /* Banner Section */
+    .banner {
+      flex-direction: column !important;
+      text-align: center !important;
+      padding: 90px 20px 40px 20px !important;
+      height: auto !important;
+    }
+
+    .banner .content {
+      width: 100% !important;
+      margin-bottom: 20px;
+    }
+
+    .banner .content h1 {
+      font-size: 2em !important;
+      line-height: 1.3em !important;
+    }
+
+    .banner .content p {
+      font-size: 1em !important;
+      line-height: 1.6em !important;
+    }
+
+    .banner .actions .button {
+      font-size: 1em !important;
+      padding: 12px 25px !important;
+      border-radius: 6px;
+    }
+
+    .banner .image {
+      width: 100% !important;
+      height: auto !important;
+      display: flex;
+      justify-content: center;
+    }
+
+    .banner .image img {
+      width: 90% !important;
+      height: auto !important;
+      border-radius: 10px;
+      object-fit: cover;
+      opacity: 1 !important;
+    }
+  }
+
+  /* Small screens under 480px */
+  @media (max-width: 480px) {
+    .banner .content h1 {
+      font-size: 1.6em !important;
+    }
+    .banner .content p {
+      font-size: 0.95em !important;
+    }
+    .banner .actions .button {
+      width: 100%;
+    }
+  }
+</style>
+
 	</head>
 	<body class="is-preload">
 
@@ -299,6 +384,7 @@ window.addEventListener('load', () => {
 
 	</body>
 </html>
+
 
 
 
