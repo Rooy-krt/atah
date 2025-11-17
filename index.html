@@ -92,6 +92,48 @@
     border-radius: 8px !important;
   }
 }
+/* ---------- BLOB CONTAINER ---------- */
+.blob-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* ---------- THE BLOB ITSELF ---------- */
+.blob {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 105%;
+  height: 105%;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  transform: translate(-50%, -50%);
+  filter: blur(30px);
+  opacity: 0.55;
+  border-radius: 55% 45% 65% 35% / 40% 60% 40% 60%;
+  animation: morph 8s infinite ease-in-out;
+  z-index: -1;
+}
+
+/* ---------- IMAGE INSIDE THE BLOB ---------- */
+.blob-wrap img {
+  border-radius: 16px;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ---------- MORPHING KEYFRAME ---------- */
+@keyframes morph {
+  0% { border-radius: 35% 65% 60% 40% / 55% 45% 55% 45%; }
+  25% { border-radius: 55% 45% 35% 65% / 40% 60% 50% 50%; }
+  50% { border-radius: 50% 50% 45% 55% / 60% 40% 60% 40%; }
+  75% { border-radius: 40% 60% 65% 35% / 50% 50% 40% 60%; }
+  100% { border-radius: 35% 65% 60% 40% / 55% 45% 55% 45%; }
+}
+			
 </style>
 
 
@@ -150,9 +192,13 @@ display: flex; align-items: center; justify-content: space-between; padding: 15p
 								destinies rekindled, and believers awakened
 								to their identity in Christ.</p>
 						</div>
-						<div class="image">
-							<img src="images/slider2.png" alt="" />
-						</div>
+					<div class="image">
+  <div class="blob-wrap">
+    <div class="blob"></div>
+    <img src="images/slider2.png">
+  </div>
+</div>
+
 					</section>
 
 				<!-- Spotlight -->
@@ -173,8 +219,12 @@ display: flex; align-items: center; justify-content: space-between; padding: 15p
 							
 						</div>
 						<div class="image">
-							<img src="images/kestin2.png" alt="" />
-						</div>
+  <div class="blob-wrap">
+    <div class="blob"></div>
+    <img src="images/kestin2.png">
+  </div>
+</div>
+
 					</section>
 
 				<!-- Spotlight -->
@@ -193,8 +243,12 @@ display: flex; align-items: center; justify-content: space-between; padding: 15p
 						
 						</div>
 						<div class="image">
-							<img src="images/gallery 1.png" alt="" />
-						</div>
+  <div class="blob-wrap">
+    <div class="blob"></div>
+    <img src="images/gallery 1.png">
+  </div>
+</div>
+
 					</section>
 
 				<!-- Gallery -->
@@ -388,6 +442,7 @@ window.addEventListener('load', () => {
 
 	</body>
 </html>
+
 
 
 
